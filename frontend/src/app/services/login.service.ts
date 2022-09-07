@@ -1,17 +1,18 @@
+import { User } from './../user';
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class LoginService {
+  private baseUrl="http://localhost:8080/user/login"
+  constructor(private httpClient: HttpClient) { }
 
-  constructor() { }
-
-  authenticate(username: string, password: string)
+  loginUser(user: User): Observable<object>
   {
-    if(username === 'admin' && password === 'admin')
-    {
-      console.log("Login Success, ADMIN")
-    }
+    console.log(user)
+    return this.httpClient.post(`${this.baseUrl}`, user);
   }
 }

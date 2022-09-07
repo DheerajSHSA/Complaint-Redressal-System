@@ -1,10 +1,19 @@
-import { LoginComponent } from './login/login.component';
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { Routes, RouterModule } from '@angular/router';
+import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './login/login.component';
+import { LogoutComponent } from './logout/logout.component';
+import { ComplaintsComponent } from './complaints/complaints.component';
+import { AdminPanelComponent } from './admin-panel/admin-panel.component';
+
 
 const routes: Routes = [
-  { path: '', component: LoginComponent },
-  { path: 'login', component: LoginComponent }
+  { path: '', redirectTo: "home", pathMatch: 'full' },
+  { path: 'home', component: HomeComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'complaints', component: ComplaintsComponent },
+  { path: 'adminpanel', component: AdminPanelComponent },
+  { path: 'logout', component: LogoutComponent }
 ];
 
 @NgModule({

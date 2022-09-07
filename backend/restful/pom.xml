@@ -8,13 +8,13 @@
 		<version>2.7.3</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.crs</groupId>
-	<artifactId>restful</artifactId>
+	<groupId>com</groupId>
+	<artifactId>complaintsystem</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>restful</name>
-	<description>Demo project for Spring Boot</description>
+	<name>complaintsystem</name>
+	<description>Demo project of Complaint System</description>
 	<properties>
-		<java.version>17</java.version>
+		<java.version>1.8</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -31,6 +31,11 @@
 			<artifactId>spring-boot-devtools</artifactId>
 			<scope>runtime</scope>
 			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<scope>runtime</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
